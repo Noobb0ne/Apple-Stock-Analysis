@@ -1,0 +1,41 @@
+--Code for Yearwise Highest Value
+select year, max(high)
+from tutorial.aapl_historical_stock_price
+where high is not NULL
+group by year
+order by year DESC
+
+--Code for Yearwise Lowest Value
+select year, min(high)
+from tutorial.aapl_historical_stock_price
+where high is not NULL
+group by year
+order by year DESC
+
+--Code for Monthly High Maximum Value
+select year, month, max(high)
+from tutorial.aapl_historical_stock_price
+where high is not NULL
+group by year
+order by year DESC
+
+--Code for Monthly High Minimum Value
+select year, month, min(high)
+from tutorial.aapl_historical_stock_price
+where high is not NULL
+group by year
+order by year DESC
+
+--Code for Monthly Low Maximum Value
+select year, month, max(low)
+from tutorial.aapl_historical_stock_price
+where high is not NULL
+group by year
+order by year DESC
+
+--Code for Monthly Low Minimum Value
+select year, month, min(low)
+from tutorial.aapl_historical_stock_price
+where high is not NULL
+group by year
+order by year DESC
